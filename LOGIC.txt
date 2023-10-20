@@ -1,0 +1,32 @@
+LOGIC FOR CODE
+
+
+instruction---
+******GIVE THE FILE PATH OF INPUT FILE IN file_path (line 50 in code) WITHOUT DOUBLE QUOTES        
+
+1-->   WE FIRST IMPORT ALL DATA FROM INPUT FILE AND STORE INTO VECTOR (we have to change input file for each time manually).
+
+2-->   WE CREATE A SET AND SEND ALL DATA FROM VECTOR TO SET FOR SINGULIRITY.
+
+3-->   WE TAKE EACH WORD FROM VECTOR AND PASS INTO FUNCTION TO CHECK WHETHER IT IS COMPOUND WORD OR NOT.
+
+       LOGIC FOR CHECKING COMPOUND WORD
+    
+      3.1---> we itrate throug word and make prfix and suffix    eg. prefix = 0, i + 1
+                                                                     suffix = i + 1;
+      3.2-->  we check if prefix is in set AND suffix is in set
+              OR    we check if prefix is in set AND suffix can be compund word(check by recursion)
+
+              then only it can be a compund word (PREFIX+SUFFIX) and push the word in result vector.
+
+4-->   WE SORT RESULT VECTOR ALPHBEDICALLY.
+
+5-->   WE SEARCH FROM END POINT TO START OF { MAXIMUM LENGTH WORD }  AND STORE INTO STRING S1;
+
+6-->   WE SEARCH FROM END POINT TO START OF { MAXIMUM LENGTH WORD WITH GIVEN CONDITION WORD !=S1 } THEN STORE INTO STRING S2;
+
+7-->   IN LAST PRINT S1 AND S2.
+
+
+        IMP==>  LOOP IS STARTING FROM END TO START   SO WE CAN FIND WORD ALPHBEDICALLY OPRDER.
+          eg.   z- y-x ....... a   we can traverse all word and get alphabedically order word.
